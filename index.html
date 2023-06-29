@@ -13,17 +13,30 @@
   <link rel="icon" href="favicon.ico">
 
   <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body>
-    <!-- Your website content goes here -->
-    <form action="POST" id="loginForm">
-        <input name="username" type="text" placeholder="Ingrese su usuario">
-        <input name="password" type="password" placeholder="Ingrese su contraseña">
-        <button type="submit">Ingresar</button>
+
+  <div class="min-size d-flex align-items-center justify-content-center">
+    <form action="POST" id="loginForm" class="d-flex flex-column align-items-center w-50  p-3 bg-secondary rounded">
+        <h1 class="text-light mb-5 mt-5">Login</h1>
+        <input class="form-control mb-2 w-75" name="username" type="text" placeholder="Ingrese su usuario">
+        <input class="form-control mb-2 w-75" name="password" type="password" placeholder="Ingrese su contraseña">
+        <button type="submit" class="btn btn-primary mt-3 w-25 mb-5">Ingresar</button>
     </form>
+  </div>
+
+
     <!-- JavaScript Files -->
-    <script src="js/script.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

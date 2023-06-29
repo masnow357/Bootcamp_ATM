@@ -1,0 +1,1 @@
+En la carpeta utils hay un archivo .json donde se encuentran tanto los "usernames", como las "passwords".

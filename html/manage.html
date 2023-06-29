@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Basic SEO Tags -->
+  <title>Banco de occidente</title>
+  <meta name="description" content="This is a mockup of an ATM">
+  <meta name="keywords" content="banks, ATM">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.ico">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+    <div class="container min-size">
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#getBalanceModal" id="getBalance">Consultar saldo</button>
+        
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#getConsignmentModal" id="getConsignment">Ingresar monto</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#getWithdrawlModal"  id="getWithdrawl">Retirar Monto</button>
+        
+            <a class="btn btn-primary" href="/">Salir</a>
+        </div>
+
+    
+
+    </div>
+
+
+    <!-- getBalanceModal -->
+    <div class="modal fade" id="getBalanceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header flex flex-column justify-content-center align-items-center">
+                <h5 class="modal-title mb-3" id="exampleModalLabel">Saldo</h5>
+                <div id="balance"></div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+    <!-- getConsignmentModal -->
+    <div class="modal fade" id="getConsignmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header flex flex-column justify-content-center align-items-center">
+                <h5 class="modal-title mb-3" id="exampleModalLabel">Saldo</h5>
+                <div id="consignment">
+                    <form action="POST" id="consignment_form" class="input-group mb-3">
+                        <input class="form-control" name="balance" type="number" placeholder="Ingrese el monto a añadir">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit">Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- getWithdrawlModal -->
+    <div class="modal fade" id="getWithdrawlModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header flex flex-column justify-content-center align-items-center">
+                <h5 class="modal-title mb-3" id="exampleModalLabel">Saldo</h5>
+                <div id="withdrawl">
+                    <form action="POST" id="withdrawl_form" class="input-group mb-3">
+                        <input class="form-control" name="balance" type="number" placeholder="Ingrese el monto a retirar">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit">Retirar</button>
+                        </div>
+                    </form>
+                </div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/manage.js"></script>
+</body>
+</html>

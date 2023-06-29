@@ -1,0 +1,39 @@
+.min-size{
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.container{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 20px;
+}
+
+.container > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.container > div > button, .container > div > a{
+    margin-block: 20px;
+
+}
+
+@media (max-width: 720px) {
+
+    #loginForm{
+        width: 90% !important;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    #loginForm button{
+        width: 50% !important;
+        min-width: 100px;
+    }
+
+}

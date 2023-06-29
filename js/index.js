@@ -12,7 +12,7 @@ if (loginForm) {
       const isValid = await user.validate();
       console.log(isValid);
       localStorage.setItem("user", JSON.stringify(user));
-      window.location.replace("/html/manage.html");
+      window.location.replace("manage.html");
     } catch (error) {
       handleException(error);
     }

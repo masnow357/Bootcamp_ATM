@@ -1,17 +1,18 @@
 const loginForm = document.getElementById('loginForm');
 if (loginForm) {
-  loginForm
-  let user;
   loginForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const username = event.target[0].value;
     const password = event.target[1].value;
   
-    user = new User(username, password);
+    const USER = new User(username, password);
     try {
-      const isValid = await user.validate();
+      const isValid = await USER.validate();
       console.log(isValid);
-      localStorage.setItem("user", JSON.stringify(user));
+      if (!isValid) {
+        throw Error('Contraseña incorrecta');
+      }  
+      localStorage.setItem("user", JSON.stringify(USER));
       window.location.replace("manage.html");
     } catch (error) {
       handleException(error);

@@ -2,9 +2,9 @@
 const USER = JSON.parse(localStorage.getItem('user'))
 
 // This fragment of code creates childs of "Consultar monto"; "Ingresar monto" and "Retirar monto".
-let balanceNode;
-let consignmentNode;
-let withdrawlNode;
+let balanceNode = null;
+let consignmentNode = null;
+let withdrawlNode = null;
 
 document.getElementById('getBalance').addEventListener('click', event => {
     clean();
@@ -15,7 +15,6 @@ document.getElementById('getBalance').addEventListener('click', event => {
     balanceNode.appendChild(
         document.createTextNode(`Tu saldo es: ${USER.user.balance}`)
         );
-
 })
 
 document.getElementById('getConsignment').addEventListener('click', event => {
